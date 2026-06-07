@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+.hero{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-video{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to right,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.45)
+  );
+}
+
+.hero-content{
+  position:relative;
+  z-index:10;
+
+  max-width:800px;
+  text-align:center;
+
+  color:white;
+
+  animation:fadeUp 1.2s ease;
+}
+
+.hero-tag{
+  display:inline-block;
+
+  padding:10px 20px;
+
+  border-radius:40px;
+
+  background:rgba(255,255,255,.1);
+
+  backdrop-filter:blur(10px);
+
+  color:#d9ff00;
+
+  font-weight:600;
+
+  margin-bottom:25px;
+}
+
+.hero-content h1{
+  font-size:5rem;
+  line-height:1.1;
+  font-weight:900;
+}
+
+.hero-content h1 span{
+  display:block;
+
+  background:linear-gradient(
+      90deg,
+      #d9ff00,
+      #9cff00
+  );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.hero-content p{
+  margin-top:25px;
+
+  font-size:1.1rem;
+
+  color:#dcdcdc;
+
+  line-height:1.8;
+}
+
+.hero-buttons{
+  margin-top:40px;
+
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.primary-btn{
+  padding:16px 40px;
+
+  border:none;
+  border-radius:50px;
+
+  background:linear-gradient(
+      135deg,
+      #d9ff00,
+      #9cff00
+  );
+
+  color:#111;
+  font-weight:700;
+  cursor:pointer;
+
+  transition:.4s;
+}
+
+.primary-btn:hover{
+  transform:translateY(-5px);
+
+  box-shadow:
+  0 15px 30px rgba(156,255,0,.4);
+}
+
+.secondary-btn{
+  padding:16px 40px;
+
+  border-radius:50px;
+  border:2px solid white;
+
+  background:transparent;
+  color:white;
+
+  cursor:pointer;
+
+  transition:.4s;
+}
+
+.secondary-btn:hover{
+  background:white;
+  color:black;
+}
+
+.floating-card{
+  position:absolute;
+
+  width:180px;
+
+  padding:20px;
+
+  background:rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+
+  border:1px solid rgba(255,255,255,.15);
+
+  border-radius:20px;
+
+  color:white;
+
+  text-align:center;
+
+  animation:float 4s ease-in-out infinite;
+}
+
+.card-1{
+  left:8%;
+  top:30%;
+}
+
+.card-2{
+  right:8%;
+  bottom:25%;
+}
+
+.floating-card h3{
+  color:#d9ff00;
+  font-size:2rem;
+}
+
+.scroll-indicator{
+  position:absolute;
+
+  bottom:30px;
+  left:50%;
+
+  transform:translateX(-50%);
+}
+
+.scroll-indicator span{
+  display:block;
+
+  width:30px;
+  height:50px;
+
+  border:2px solid white;
+  border-radius:20px;
+
+  position:relative;
+}
+
+.scroll-indicator span::before{
+  content:'';
+
+  position:absolute;
+  left:50%;
+  top:8px;
+
+  width:6px;
+  height:10px;
+
+  border-radius:50%;
+
+  background:white;
+
+  transform:translateX(-50%);
+
+  animation:scroll 1.5s infinite;
+}
+
+@keyframes scroll{
+  0%{
+    opacity:1;
+    top:8px;
+  }
+
+  100%{
+    opacity:0;
+    top:25px;
+  }
+}
+
+@keyframes float{
+  50%{
+    transform:translateY(-15px);
+  }
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+  font-size:3rem;
+}
+
+.hero-buttons{
+  flex-direction:column;
+}
+
+.floating-card{
+  display:none;
+}
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 750px;
+
+    background-image:
+    linear-gradient(
+      rgba(0,0,0,.20),
+      rgba(0,0,0,0.20)
+    ),
+    url("../assets/image2.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+.hero::before{
+    content:'';
+    position:absolute;
+
+    width:500px;
+    height:500px;
+
+    background:#d9ff00;
+    filter:blur(180px);
+
+    opacity:.15;
+
+    top:-100px;
+    left:-100px;
+
+    animation: glowMove 8s linear infinite;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    background:#00e5ff;
+    filter:blur(180px);
+
+    opacity:.12;
+
+    bottom:-100px;
+    right:-100px;
+}
+
+@keyframes glowMove{
+    50%{
+        transform:translateY(50px);
+    }
+}
