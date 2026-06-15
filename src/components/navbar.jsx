@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="logo">
         <FaDumbbell className="logo-icon" />
-        <span> AYUSH FITNESS GYM</span>
+        <span> AYUSH FITNESS </span>
       </div>
 
       <ul className="nav-links">
