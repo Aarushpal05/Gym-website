@@ -47,9 +47,9 @@ function Trainers() {
               <p>{trainer.role}</p>
 
               <div className="social-icons">
-                <a href="#"><FaInstagram /></a>
-                <a href="#"><FaFacebookF /></a>
-                <a href="#"><FaLinkedinIn /></a>
+                <a href="https://instagram.com"><FaInstagram /></a>
+                <a href="https://facebook.com"><FaFacebookF /></a>
+                <a href="https://linkedin.com"><FaLinkedinIn /></a>
               </div>
             </div>
           </div>
